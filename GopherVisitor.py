@@ -34,8 +34,8 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GopherParser#preproc.
-    def visitPreproc(self, ctx:GopherParser.PreprocContext):
+    # Visit a parse tree produced by GopherParser#decl.
+    def visitDecl(self, ctx:GopherParser.DeclContext):
         return self.visitChildren(ctx)
 
 
@@ -49,6 +49,11 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by GopherParser#fileouts.
+    def visitFileouts(self, ctx:GopherParser.FileoutsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by GopherParser#label_def.
     def visitLabel_def(self, ctx:GopherParser.Label_defContext):
         return self.visitChildren(ctx)
@@ -59,8 +64,28 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by GopherParser#class_stmt.
+    def visitClass_stmt(self, ctx:GopherParser.Class_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#impl_stmt.
+    def visitImpl_stmt(self, ctx:GopherParser.Impl_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#class_inst.
+    def visitClass_inst(self, ctx:GopherParser.Class_instContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by GopherParser#def_func_stmt.
     def visitDef_func_stmt(self, ctx:GopherParser.Def_func_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#def_func_expr.
+    def visitDef_func_expr(self, ctx:GopherParser.Def_func_exprContext):
         return self.visitChildren(ctx)
 
 
@@ -89,6 +114,11 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by GopherParser#expnumberAtom.
+    def visitExpnumberAtom(self, ctx:GopherParser.ExpnumberAtomContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by GopherParser#boolAtom.
     def visitBoolAtom(self, ctx:GopherParser.BoolAtomContext):
         return self.visitChildren(ctx)
@@ -109,6 +139,11 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by GopherParser#listspaceAtom.
+    def visitListspaceAtom(self, ctx:GopherParser.ListspaceAtomContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by GopherParser#nullAtom.
     def visitNullAtom(self, ctx:GopherParser.NullAtomContext):
         return self.visitChildren(ctx)
@@ -116,6 +151,11 @@ class GopherVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by GopherParser#id_callExpr.
     def visitId_callExpr(self, ctx:GopherParser.Id_callExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#class_instExpr.
+    def visitClass_instExpr(self, ctx:GopherParser.Class_instExprContext):
         return self.visitChildren(ctx)
 
 
@@ -136,6 +176,11 @@ class GopherVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by GopherParser#multExpr.
     def visitMultExpr(self, ctx:GopherParser.MultExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#def_funcExpr.
+    def visitDef_funcExpr(self, ctx:GopherParser.Def_funcExprContext):
         return self.visitChildren(ctx)
 
 
@@ -199,6 +244,11 @@ class GopherVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by GopherParser#match_stmt.
+    def visitMatch_stmt(self, ctx:GopherParser.Match_stmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by GopherParser#until_stmt.
     def visitUntil_stmt(self, ctx:GopherParser.Until_stmtContext):
         return self.visitChildren(ctx)
@@ -231,6 +281,11 @@ class GopherVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by GopherParser#list_var.
     def visitList_var(self, ctx:GopherParser.List_varContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GopherParser#linspace.
+    def visitLinspace(self, ctx:GopherParser.LinspaceContext):
         return self.visitChildren(ctx)
 
 

@@ -4,13 +4,15 @@ this is multiline Comment
 *#
 #$$#
 incl incld::incld;
-load builtins;
+load turtle;
+load time;
 var lis is incld::lis;
-for x : (lis>[1,2]?lis:[1,2]) {
+as=9;
+for x : (lis>[1,2]?lis:[1,2]){
     println x;
 }
 println x;
-var name->(input "Please enter your name: ");
+(input "Please enter your name: ") -> name;
 label printname{
     println y;
 }
@@ -25,6 +27,15 @@ until name=="end"{
     goto printname;
     name=gets "Please enter your name(enter end to stop): ";
 }
+num:float = gets "input any number: ";
+println num+35;
+func:any = |tm| => {
+    extcall(tm) time::sleep;
+};
 abs = incld::f ;
 println incld::f::(-8);
-println abs::(-786);
+println abs::(-768.5858);
+outs l[100,6:7] "f.txt" "w";
+turt:any = extcall() turtle::Turtle;
+extcall(90,90) turtle::setpos;
+key;

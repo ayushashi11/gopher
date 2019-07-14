@@ -1,0 +1,26 @@
+$#
+Yo
+#$
+type Person{
+    name=" "
+    age=0
+}
+pers1 = Person{"John{n}lenon","90"};
+pers2 = Person::new::("Leonhardt","20");
+println pers1::getName::();
+println pers2::name;
+impl Person{
+    function new(name,age){
+        prs = Person{name,age};
+        ret prs;
+    }
+    function __init(name){
+        ret this::new::(name);
+    }
+    function getName(){
+        ret this::name;
+    }
+    function getAge(){
+        ret this::age;
+    }
+}
